@@ -9,9 +9,15 @@
   flex-grow: 1;
 }
 
-.banner {
+.carrusel img {
   object-fit: cover;
-  height: 395px;
+  height: 495px;
   width: 100%;
 }
+.logo{
+  border-radius: 1em;
+  width: 40%;
+}
+
+
 
