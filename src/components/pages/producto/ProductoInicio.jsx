@@ -14,7 +14,7 @@ const ProductoInicio = ({ receta }) => {
             {receta.descripcion_breve}
           </Card.Text>
           <div className="text-center">
-            <NavLink className={"btn btn-primary"} to={"/detalles"} >
+            <NavLink className={"btn btn-primary"} to={`/detalles/${receta.id}`}>
               Ver Receta
             </NavLink>
           </div>

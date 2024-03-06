@@ -29,7 +29,7 @@ function App() {
           />
           <Route path="/administrar" element = {<Administrar/>} />
           <Route path="/registro" element = {<RegistroProducto/>} />
-          <Route path="/detalles" element = {<DetallesReceta/>} />
+          <Route path="/detalles/:id" element = {<DetallesReceta/>} />
         </Routes>
         <Footer />
       </BrowserRouter>
