@@ -8,6 +8,7 @@ import Carrusel from "./components/pages/producto/Carrusel";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import DetallesReceta from "./components/pages/DetallesReceta";
+import Error from "./components/pages/Error";
 
 
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/administrar" element = {<Administrar/>} />
           <Route path="/registro" element = {<RegistroProducto/>} />
           <Route path="/detalles/:id" element = {<DetallesReceta/>} />
+          <Route path="*" element = {<Error></Error>} />
         </Routes>
         <Footer />
       </BrowserRouter>

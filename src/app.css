@@ -9,6 +9,9 @@
 .mainSection {
   flex-grow: 1;
 }
+.main-error{
+  background-color: #acf3e3;
+}
 
 .carrusel img {
   object-fit: cover;

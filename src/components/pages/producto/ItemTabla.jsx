@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Swal from "sweetalert2";
 import { borrarRecetas, leerRecetas } from "../../helpers/queries";
+import { NavLink } from "react-router-dom";
 
 const ItemTabla = ({ receta, setRecetas }) => {
   const eliminarProducto = () => {
@@ -48,9 +49,9 @@ const ItemTabla = ({ receta, setRecetas }) => {
       <td className="p-3">{receta.categoria}</td>
       <td className="p-3">
         <div className="d-flex justify-content-center">
-          <Button variant="warning">
+          <NavLink  to={'/editar'} className={'btn btn-warning'}>
             <i className="bi bi-pencil"></i>
-          </Button>
+          </NavLink>
           <Button variant="danger" className="ms-1" onClick={eliminarProducto}>
             <i className="bi bi-trash3-fill"></i>
           </Button>
