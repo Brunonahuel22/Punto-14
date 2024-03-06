@@ -34,7 +34,7 @@ const Administrar = () => {
             </tr>
           </thead>
           <tbody>
-            {recetas.map((item) => (  <ItemTabla key ={item.id} receta ={item} />  ))}
+            {recetas.map((item) => (  <ItemTabla key ={item.id} receta ={item} setRecetas = {setRecetas} />  ))}
           </tbody>
         </Table>
     
