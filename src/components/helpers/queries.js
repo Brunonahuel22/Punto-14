@@ -30,8 +30,6 @@ export const crearRecetas = async (productoNuevo) => {
 
 //PUT O PACH
 //DELETE
-
-//POST
 export const borrarRecetas = async (id) => {
     try {
         const respuesta = await fetch(api + '/' + id, {
