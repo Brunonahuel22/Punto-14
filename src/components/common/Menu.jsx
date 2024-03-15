@@ -16,10 +16,10 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink to="/" className="nav-link">Inicio</NavLink>
-            <NavLink to= "/administrar" className="nav-link ">Administrar</NavLink>
-            <NavLink to={"/Registro"}  className={"nav-link"} >Registro</NavLink>
-            <NavLink to={"/login"}   className={"nav-link"}>Login</NavLink>
+            <NavLink end to="/" className="nav-link">Inicio</NavLink>
+            <NavLink end to= "/administrar" className="nav-link ">Administrar</NavLink>
+            <NavLink end to={"/Registro"}  className={"nav-link"} >Registro</NavLink>
+            <NavLink end to={"/login"}   className={"nav-link"}>Login</NavLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

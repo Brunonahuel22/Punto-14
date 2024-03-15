@@ -1,31 +1,40 @@
 {
   "recetas": [
     {
-      "id": "1",
       "nombreReceta": "Espaguetis a la Carbonara",
-      "precio": 0,
+      "precio": "500",
       "imagen": "https://images.pexels.com/photos/6287554/pexels-photo-6287554.jpeg",
-      "categoria": "Pasta",
+      "categoria": "Pastas",
       "descripcion_breve": "Receta clásica italiana",
-      "descripcion_larga": "Los espaguetis a la carbonara es un plato de pasta de origen italiano. La receta tradicional lleva pocos ingredientes como panceta, huevos, queso parmesano y pimienta negra. Es un plato delicioso y cremoso que se prepara en poco tiempo."
+      "descripcion_amplia": "Los espaguetis a la carbonara es un plato de pasta de origen italiano. La receta tradicional lleva pocos ingredientes como panceta, huevos, queso parmesano y pimienta negra. Es un plato delicioso y cremoso que se prepara en poco tiempo.",
+      "id": "1"
     },
     {
       "id": "2",
       "nombreReceta": "Ensalada César",
-      "precio": 0,
+      "precio": 500,
       "imagen": "https://images.pexels.com/photos/3672013/pexels-photo-3672013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "Ensaladas",
       "descripcion_breve": "Ensalada clásica con pollo",
-      "descripcion_larga": "La ensalada César es una ensalada popular que lleva lechuga romana, pollo a la parrilla, croutones, queso parmesano y salsa César. Es una ensalada sabrosa y satisfactoria que se puede disfrutar como plato principal o como acompañamiento. La combinación de ingredientes frescos y la salsa cremosa hacen de esta ensalada un plato favorito en todo el mundo."
+      "descripcion_amplia": "La ensalada César es una ensalada popular que lleva lechuga romana, pollo a la parrilla, croutones, queso parmesano y salsa César. Es una ensalada sabrosa y satisfactoria que se puede disfrutar como plato principal o como acompañamiento. La combinación de ingredientes frescos y la salsa cremosa hacen de esta ensalada un plato favorito en todo el mundo."
     },
     {
-      "id": "3",
       "nombreReceta": "Tarta de Queso",
-      "precio": 0,
+      "precio": "1000",
       "imagen": "https://images.pexels.com/photos/162688/cheesecake-table-dessert-cream-162688.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       "categoria": "Postres",
       "descripcion_breve": "Deliciosa tarta cremosa",
-      "descripcion_larga": "La tarta de queso es un postre clásico que se compone de una base de galletas trituradas y una crema de queso horneada. Es un postre delicioso y versátil que se puede disfrutar solo o con diferentes coberturas como frutas, salsa de frutos rojos, caramelo, etc."
+      "descripcion_amplia": "La tarta de queso es un postre clásico que se compone de una base de galletas trituradas y una crema de queso horneada. Es un postre delicioso y versátil que se puede disfrutar solo o con diferentes coberturas como frutas, salsa de frutos rojos, caramelo, etc.",
+      "id": "3"
+    },
+    {
+      "id": "fb34",
+      "nombreReceta": "mesii",
+      "precio": "3000",
+      "imagen": "https://imagen.jpg",
+      "categoria": "Postres",
+      "descripcion_breve": "asdadasdasdasds",
+      "descripcion_amplia": "dsdfsdfsfsdfsdfsdfsdfsdfsdsdccccccccccccccccccccccc"
     }
   ]
 }

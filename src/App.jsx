@@ -9,16 +9,15 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import DetallesReceta from "./components/pages/DetallesReceta";
 import Error from "./components/pages/Error";
-
-
-
+import Login from "./components/pages/Login";
+import RutasProtegidas from "./components/routes/RutasProtegidas";
+import RutasAdmin from "./components/routes/RutasAdmin";
 
 function App() {
   return (
     <>
-    
       <BrowserRouter>
-      <Menu />
+        <Menu />
         <Routes>
           <Route
             path="/"
@@ -28,14 +27,17 @@ function App() {
               </>
             }
           />
-          <Route path="/administrar" element = {<Administrar/>} />
-          <Route path="/registro" element = {<RegistroProducto/>} />
-          <Route path="/detalles/:id" element = {<DetallesReceta/>} />
-          <Route path="*" element = {<Error></Error>} />
+        
+          <Route exact path="/login" element={<Login/>} />
+          <Route exact path="/administrar/*" element={<RutasProtegidas>
+            <RutasAdmin></RutasAdmin>
+          </RutasProtegidas>} />
+        
+          <Route exact path="/detalles/:id" element={<DetallesReceta />} />
+          <Route exact path="*" element={<Error></Error>} />
         </Routes>
         <Footer />
       </BrowserRouter>
-    
     </>
   );
 }

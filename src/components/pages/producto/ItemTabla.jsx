@@ -47,9 +47,10 @@ const ItemTabla = ({ receta, setRecetas }) => {
       <td className="p-3">{receta.nombreReceta}</td>
       <td className="p-3">{receta.descripcion_breve}</td>
       <td className="p-3">{receta.categoria}</td>
+      <td className="p-3">{receta.precio}</td>
       <td className="p-3">
         <div className="d-flex justify-content-center">
-          <NavLink  to={'/editar'} className={'btn btn-warning'}>
+          <NavLink to={`/administrar/editar/${receta.id}`} className={"btn btn-warning"}>
             <i className="bi bi-pencil"></i>
           </NavLink>
           <Button variant="danger" className="ms-1" onClick={eliminarProducto}>

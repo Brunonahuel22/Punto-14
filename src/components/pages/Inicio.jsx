@@ -3,42 +3,39 @@ import ProductoInicio from "./producto/ProductoInicio";
 import { useEffect, useState } from "react";
 import { leerRecetas } from "../helpers/queries";
 
-
-
 const Inicio = () => {
   const [recetas, setRecetas] = useState([]);
 
-    useEffect(() => {
-      obtenerProductos();
-    }, []);
+  useEffect(() => {
+    obtenerProductos();
+  }, []);
 
-  const   obtenerProductos =async ()=>{
-    const respuesta = await leerRecetas()
+  const obtenerProductos = async () => {
+    const respuesta = await leerRecetas();
 
     if (respuesta.status === 200) {
-      const dato = await respuesta.json()
+      const dato = await respuesta.json();
       setRecetas(dato);
-    } else{
-
+    } else {
+      Swal.fire({
+        position: "top-center",
+        icon: "error",
+        title: "Ocurrio un Error",
+        showConfirmButton: false,
+        timer: 1500,
+      });
     }
-  }
-
+  };
 
   return (
-  
-
     <main className="mainSection">
-   
-
       <h3 className="text-center my-3">Nuestras Recetas</h3>
 
       <Container>
         <Row>
-          {
-            recetas.map((item) =>  <ProductoInicio key ={item} receta = {item} />)
-          }
-         
-         
+          {recetas.map((item) => (
+            <ProductoInicio key={item} receta={item} />
+          ))}
         </Row>
       </Container>
     </main>
