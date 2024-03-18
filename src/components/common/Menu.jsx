@@ -1,8 +1,18 @@
 import { Nav, Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const Menu = () => {
+const Menu = ({usuarioLogueado,setUsuarioLogueado}) => {
+  const navegacion = useNavigate()
+const cerrarSesion = ()=>{
+  sessionStorage.removeItem('keyClave');
+  //resetear el state
+  setUsuarioLogueado('')
+  //mandar al login luego de cerrar sesion
+
+  navegacion('/login');
+}
+
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark">
       <Container>
@@ -16,10 +26,21 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink end to="/" className="nav-link">Inicio</NavLink>
-            <NavLink end to= "/administrar" className="nav-link ">Administrar</NavLink>
-            <NavLink end to={"/Registro"}  className={"nav-link"} >Registro</NavLink>
-            <NavLink end to={"/login"}   className={"nav-link"}>Login</NavLink>
+          <NavLink end to="/" className="nav-link">Inicio</NavLink>
+          <NavLink end to={"/Registro"}  className={"nav-link"} >Registro</NavLink>
+          {
+          (usuarioLogueado !== "")?
+          <>
+          <NavLink end to= "/administrar" className="nav-link ">Administrar</NavLink>
+          <button className="nav-link" onClick={cerrarSesion}>Cerrar Sesion</button>
+          </>:<NavLink end to={"/login"}   className={"nav-link"}>Login</NavLink>
+           }
+
+
+          
+           
+          
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

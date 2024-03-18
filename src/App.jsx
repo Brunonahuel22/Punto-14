@@ -12,12 +12,19 @@ import Error from "./components/pages/Error";
 import Login from "./components/pages/Login";
 import RutasProtegidas from "./components/routes/RutasProtegidas";
 import RutasAdmin from "./components/routes/RutasAdmin";
+import { useState } from "react";
 
 function App() {
+
+  const usuario = JSON.parse(sessionStorage.getItem("keyClave"))
+  const [usuarioLogueado , setUsuarioLogueado] = useState("");
+
+
+
+
   return (
-    <>
       <BrowserRouter>
-        <Menu />
+        <Menu usuarioLogueado = {usuarioLogueado} setUsuarioLogueado = {setUsuarioLogueado} />
         <Routes>
           <Route
             path="/"
@@ -28,7 +35,7 @@ function App() {
             }
           />
         
-          <Route exact path="/login" element={<Login/>} />
+          <Route exact path="/login" element={<Login setUsuarioLogueado = {setUsuarioLogueado}  />} />
           <Route exact path="/administrar/*" element={<RutasProtegidas>
             <RutasAdmin></RutasAdmin>
           </RutasProtegidas>} />
@@ -38,7 +45,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </>
+   
   );
 }
 

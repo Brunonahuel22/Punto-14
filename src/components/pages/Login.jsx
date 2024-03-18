@@ -8,10 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Login = () => {
+const Login = ({setUsuarioLogueado}) => {
   const {
     register,
-    reset,
     formState: { errors },
     handleSubmit,
     setValue,
@@ -29,6 +28,9 @@ const Login = () => {
       });
 
       navegacion("/administrar");
+
+      setUsuarioLogueado(datos.email)
+
     } else {
       console.log("error");
       Swal.fire({
